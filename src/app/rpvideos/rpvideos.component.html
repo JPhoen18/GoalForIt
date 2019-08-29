@@ -1,0 +1,11 @@
+<div [@listStagger]="users$">
+    <div *ngFor="let user of users$; index as i">
+        <h5>
+        <button mat-stroked-button routerLink="vidInfo" (click)="getIndex(i)" [class.activated]="currentUrl == 'videoresource/vidInfo'"><p><strong>Video Resource: {{i}}</strong></p></button>
+        <h4><strong>{{user.title}}</strong></h4>
+        <p><strong>Channel Title:</strong>{{user.channelTitle}}</p>
+        <p><strong>URL:</strong>{{user.URL}}</p>
+        <p><strong>Description:</strong>{{user.description}}</p>
+        </h5>
+    </div>
+</div>

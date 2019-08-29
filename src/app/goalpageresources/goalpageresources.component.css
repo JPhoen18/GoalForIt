@@ -1,0 +1,56 @@
+#resorganizer{
+  margin-top: 20vh;
+  background-color: #ffe6b3;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 5px 5px 5px 6px gray;
+  white-space: normal;
+  align: center;
+
+}
+
+#resourceview{
+  white-space: normal;
+  align: center;
+}
+
+#RedditTitle{
+  white-space: normal;
+  align: center;
+}
+
+#RedditAuthor{
+  white-space: normal;
+  align: center;
+}
+
+#RedditResponse{
+  white-space: normal;
+  align: center;
+}
+
+#webTitle{
+  white-space: normal;
+  align: center;
+}
+
+#webURL{
+  white-space: normal;
+  align: center;
+}
+
+#webSnippet{
+  white-space: normal;
+  align: center;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}

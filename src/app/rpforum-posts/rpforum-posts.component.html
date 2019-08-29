@@ -1,0 +1,10 @@
+<div [@listStagger]="users$">
+    <div *ngFor="let user of users$; index as i">
+        <h5>
+        <button mat-stroked-button routerLink="redditInfo" (click)="getIndex(i)" [class.activated]="currentUrl == 'redditresource/redditInfo'"><p><strong>Reddit Resource: {{i}}</strong></p></button>
+        <h4><strong>{{user.RedditTitle}}</strong></h4>
+        <p><strong>Reddit Author:</strong>{{user.RedditAuthor}}</p>
+        <p><strong>Reddit Response:</strong>{{user.AuthorResponse}}</p>
+        </h5>
+    </div>
+</div>

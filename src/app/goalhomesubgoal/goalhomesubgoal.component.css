@@ -1,0 +1,50 @@
+div div{
+  width: 60vh;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  align: center;
+
+}
+#grandkid {
+  background-color: orange;
+  text-align: center;
+  overflow-y: scroll;
+  white-space: normal;
+  align: center;
+  margin-left: 20vh;
+  box-shadow: 5px 5px 5px grey;
+
+
+}
+
+
+#father{
+    background-color: #EFEFEF;
+    height: 60vh;
+    width: 100vh;
+    background-color: #EFEFEF;
+    overflow-y: scroll;
+}
+
+#Web{
+   text-align: left;
+   font-size: 40px;
+   width: 10px;
+   height: 10px;
+}
+
+#babies{
+  width: 8vh;
+  height: 8vh;
+  float: right;
+  margin-top: 1vh;
+  margin-right: -9vh;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 5px grey;
+}

@@ -1,0 +1,38 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<nav>
+  <ul>
+    <li>
+        <a routerLink="/videoresource" [class.activated]="currentUrl == '/videoresource'">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-nav" >
+                     <div class="visible">Videos <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span></div>
+                </button>
+
+            </div>
+        </a>
+    </li>
+    <li>
+          <a routerLink="/resource" [class.activated]="currentUrl == '/resource'">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-nav" >
+                       <div class="visible">Web Articles <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></div>
+                  </button>
+
+              </div>
+        </a>
+    </li>
+    <li>
+        <a routerLink="/redditresource" [class.activated]="currentUrl == '/redditresource'">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-nav" >
+                     <div class="visible">Forum Posts <span class="glyphicon glyphicon-comment" aria-hidden="true"></span></div>
+                </button>
+
+            </div>
+        </a>
+    </li>
+  </ul>
+</nav>

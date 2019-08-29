@@ -1,0 +1,16 @@
+<div id="overall" class="wrapper">
+  <div id="form-content"  class= "fadeInDown">
+    <ul>
+      <h1 id="realheader" class="inactive underlineHover" style="text-align: center;"> Goal For It </h1>
+
+    <div *ngIf="(componentName == 'SignUpComponent' || componentName == 'SignInComponent')" >
+    <h2 class="underlineHover" routerLink="/signin"  routerLinkActive="active"> Sign In </h2>
+    <h2 class="underlineHover" routerLink="/signup"  routerLinkActive="active">Sign Up </h2>
+    </div>
+
+    <input id="Log" type="button" (click)="onLogout()" value="Logout" />
+
+    </ul>
+    <router-outlet (activate)="changeOfRoute($event)"></router-outlet>
+  </div>
+</div>

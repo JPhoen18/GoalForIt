@@ -1,0 +1,15 @@
+<div id="controlsubgoal">
+<router-outlet (activate)="setChild($event)"></router-outlet>
+
+<span *ngIf="(subComponentName=='FirstGoalFormComponent')">
+<button mat-stroked-button type="button" (click)="onContinueClick()" >Continue</button>
+</span>
+
+<button mat-stroked-button type="button" routerLink="subgoalportion" [class.activated]="currentUrl == 'secondportion/subgoalportion'" (click)="onSubGoalClick()">Create Subgoals</button>
+
+<span *ngIf="(subComponentName=='SubgoalportionComponent')">
+<button mat-stroked-button type="button" (click)="onHaltGoalClick()">No More Sub-Goals</button>
+</span>
+
+
+</div>

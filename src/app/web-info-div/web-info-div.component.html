@@ -1,0 +1,18 @@
+
+<div id="WebDetail">
+  <h4> Web Article </h4>
+  <button mat-stroked-button routerLink="resource" [class.activated]="currentUrl == 'resource/webInfo'">Back to Web Resources</button>
+
+  <p>Title: </p>
+  <div id="webTitle">{{oneuser$.title}}</div>
+
+  <p>URL: </p>
+  <div id="webURL">{{oneuser$.URL}}</div>
+
+  <p>Snippet: </p>
+  <div id="webSnippet">{{oneuser$.Summary}}</div>
+
+  <button id="Saver" (click)="sendItBack(oneuser$.title, oneuser$.URL, oneuser$.Summary)"> Save Web Resource </button>
+
+
+  </div>

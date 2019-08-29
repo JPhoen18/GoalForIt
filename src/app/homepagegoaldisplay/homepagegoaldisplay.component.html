@@ -1,0 +1,45 @@
+
+
+<div id="father" [@listStagger]="userGoals">
+    <div id="mother" *ngFor="let usergoal of userGoals; index as i">
+
+      <span *ngIf="(userGoalNowToEndTime[i] > userGoalStartToEndTime[i]/2)">
+        <div id="secondborn" style="background-color:#FF9933;" routerLink="homeProfileResource" (click)="sendToGoals(i)"  class="btn btn-nav">
+
+        <h5>
+        <p><strong>{{usergoal.goalTitle}}</strong></p>
+        <p><{{usergoal.description}}</p>
+        <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+        </h5>
+        </div>
+    </span>
+
+    <span *ngIf="(userGoalNowToEndTime[i] < userGoalStartToEndTime[i]/2 && userGoalNowToEndTime[i]>0)">
+      <div id="secondborn" style="background-color: #FF4517;" routerLink="homeProfileResource" (click)="sendToGoals(i)"  class="btn btn-nav">
+
+     <h5>
+       <h2><strong>Almost Due</strong></h2>
+       <p><strong>{{usergoal.goalTitle}}</strong></p>
+     <p>{{usergoal.description}}</p>
+     <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+     </h5>
+     </div>
+   </span>
+
+   <span *ngIf="(userGoalNowToEndTime[i] <=0 )">
+
+     <div id="secondborn" style="background-color: #ff0000;" routerLink="homeProfileResource" (click)="sendToGoals(i)"  class="btn btn-nav">
+
+  <h5>
+    <h2><strong>Past Due!</strong></h2>
+    <p><strong>{{usergoal.goalTitle}}</strong></p>
+  <p>{{usergoal.description}}</p>
+  <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+  </h5>
+  </div>
+
+</span>
+
+
+    </div>
+</div>

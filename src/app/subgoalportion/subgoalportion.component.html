@@ -1,0 +1,98 @@
+
+
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Sub Goal</h1>
+    <form (ngSubmit)="onSubmit()" #goalForm="ngForm">
+
+      <div class="form-group">
+        <label for="goalTitle">What Is Your Sub Goal(Enter Below):</label>
+        <input type="text" class="form-control" id="goalTitle"
+               required
+               [(ngModel)]="goalModel.goalTitle" [ngModelOptions]="{standalone: true}" goalTitle="goalTitle"
+               #goalTitle="ngModel">
+        <div [hidden]="goalTitle.valid || goalTitle.pristine"
+             class="alert alert-danger">
+          You must enter a sub goal
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Describe Your Sub-Goal A Little Better:</label>
+        <input type="text" style="height:50px;" class="form-control" id="goalTitle"
+               required
+               [(ngModel)]="goalModel.description" [ngModelOptions]="{standalone: true}" description="description"
+               #description="ngModel">
+        <div [hidden]="description.valid || description.pristine"
+             class="alert alert-danger">
+          You must enter a sub goal description
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label for="goalCreationDate">Date of Sub Goal Start :</label>
+            <input
+              class="form-control"
+              id="goalCreationDate"
+              bsDatepicker [(ngModel)]="goalModel.goalCreationDate"
+              [minDate] = "minDates"
+              [maxDate] = "maxDates"
+              [ngModelOptions]="{standalone: true}"
+              goalCreationDate="goalCreationDate"
+              #goalCreationDate="bsDatepicker"
+              bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }" >
+        <div class="col-xs-12 col-12 col-md-3 form-group">
+          <button type="button" class="btn btn-success" (click)="goalCreationDate.toggle()">Date Picker</button>
+      </div>
+      <div [hidden]="goalCreationDate.valid || goalCreationDate.pristine"
+           class="alert alert-danger">
+        You must enter a sub goal start date please
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="goalDueDate">Date of sub-Goal End :</label>
+          <input
+            class="form-control"
+            id="goalDueDate"
+            bsDatepicker [(ngModel)]="goalModel.goalDueDate"
+            [minDate] = "minDates"
+            [maxDate] = "maxDates"
+            [ngModelOptions]="{standalone: true}"
+            goalDueDate="goalDueDate"
+            #goalDueDate="bsDatepicker"
+            bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
+      <div class="col-xs-12 col-12 col-md-3 form-group">
+        <button type="button" class="btn btn-success" (click)="goalDueDate.toggle()">Date Picker</button>
+    </div>
+    <div [hidden]="goalDueDate.valid || goalDueDate.pristine"
+         class="alert alert-danger">
+      You must enter a sub goal due date please
+    </div>
+  </div>
+
+  <div *ngIf="(subGoalArray!==undefined)">
+    <div class="form-group">
+
+      <label>Can this sub goal be worked on alongside the previous subgoal? (Title Below):</label>
+      <h2>{{subGoalTitleTracker}}</h2>
+      <input type="radio" name="option" class="form-control" id="resourceY"
+           required
+           [(ngModel)]="firstoption"
+           [checked]="decisionmodel.resourceYN === 1"
+           (change)="onDecisionChange(1)"
+           > Yes <br>
+           <input type="radio" name="option" class="form-control" id="resourceN"
+           required
+           [(ngModel)]="secondoption"
+           [checked]="decisionmodel.resourceYN === 2"
+           (change)="onDecisionChange(2)"
+           > No <br>
+
+         </div>
+      </div>
+
+
+      </form>
+      </div>
+</div>

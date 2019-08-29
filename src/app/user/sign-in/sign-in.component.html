@@ -1,0 +1,12 @@
+<div id="inner">
+  <div id="form-content">
+  </div>
+</div>
+
+<form id = "signin" #signInForm="ngForm" (ngSubmit)="signInForm.valid && onSubmit(signInForm)">
+  <input type="text" class="form-control" id="email" required [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }" required [(ngModel)]="userService.newUser.email" required [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :signInForm.submitted && !email.valid }"
+  name="email" placeholder="Email" email="email" #email="ngModel">
+  <input type="text" class="form-control" id="password" required [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }" required [(ngModel)]="userService.newUser.password"  name="password"
+  minlength="4" required [ngClass]="{'invalid-textbox' :signInForm.submitted && !password.valid }" placeholder="Password" password="password" #password="ngModel">
+  <input id="pushsubmit" type="submit" value="Sign In">
+  </form>

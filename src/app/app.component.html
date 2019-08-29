@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<body>
+
+<div class="container">
+
+
+
+<div id="content">
+   <router-outlet></router-outlet>
+</div>
+
+<div id="inplace">
+<header id="bottomheader"> OPTIONS </header>
+<ul id = "options">
+  <li>
+      <a routerLink="resourceList" [class.activated]="currentUrl == '/resourceList'">
+          <div id="opt1">Create To-Do Resource List</div>
+      </a>
+  </li>
+  <li>
+      <a routerLink="goalHome" [class.activated]="currentUrl == '/goalHome'">
+          <div id="opt1">User Goal Home Page</div>
+      </a>
+  </li>
+
+</ul>
+</div>
+</div>
+
+</body>
