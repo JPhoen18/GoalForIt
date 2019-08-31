@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Project Organization
+Project is divided into two main areas.  There is the backend files, consisting of the node.js server code, mongodb model schemas, and code that handles external api requests.  In the client-side code, I have all of the components that the user is able to interact with.  Included with the client-side code are the angular services responsible for server and api calls
