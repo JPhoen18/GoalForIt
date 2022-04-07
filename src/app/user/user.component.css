@@ -1,0 +1,144 @@
+
+
+
+.fadeInDown {
+  background-color: #FF613D;
+
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+
+}
+
+.log:hover{
+  color: #adad85;
+}
+.sign:hover{
+  color: #adad85;
+}
+
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fadeIn {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+.wrapper {
+  /*background-image: url(https://cdn.pixabay.com/photo/2018/03/01/09/33/business-3190209_960_720.jpg);*/
+  background-color: #FFE6E0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+
+
+}
+
+h2{
+  float:left;
+  padding-left: 6vh;
+  color: #FFE6E0;
+}
+
+
+#realheader{
+  text-align: center;
+}
+
+#form-content{
+  margin-top: 10vh;
+  margin-left: 5vh;
+
+  float: left;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 5px 5px 5px 6px gray;
+
+
+}
+ul{
+
+  float: left;
+}
+
+
+#Log{
+  margin-top: 0px;
+  margin-left: 0vh;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 400px) {
+  .wrapper{
+    width: 130%;
+    height: 130%;
+  }
+
+}
+
+@media only screen and (max-height: 400px) {
+       .wrapper{
+         width: 190%;
+
+       }
+      
+
+      #form-content ul{
+        margin-left: 27vh;
+      }
+      #realheader{
+        margin-left: -25vh;
+      }
+    ul div{
+      margin-left: -25vh;
+    }
+    #Log{
+      margin-left: -25vh;
+    }
+}

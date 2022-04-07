@@ -1,0 +1,57 @@
+
+div div h3{
+  margin-top: 18vh;
+}
+
+.form-field input{
+  margin-left: 40%;
+}
+
+@media only screen and (max-width: 400px) {
+  #onlyFormGroup{
+    display: inline-block;
+    width: 100%;
+
+
+  }
+  #resourceY{
+    margin-left: 10vh;
+  }
+  #resourceN{
+    margin-left: 25vh;
+    margin-top: -16vh;
+  }
+
+  #YY{
+    margin-left: 10.5vh;
+  }
+  #NN{
+    margin-left: 26vh;
+  }
+
+}
+
+@media only screen and (max-height: 400px) {
+  #onlyFormGroup{
+    display: inline-block;
+    width: 80%;
+  }
+  div div h3{
+    margin-top: 30vh;
+  }
+  #resourceY{
+    margin-left: 20vh;
+  }
+  #resourceN{
+    margin-left: 50vh;
+    margin-top: -28.5vh;
+  }
+
+  #YY{
+    margin-left: 21vh;
+  }
+  #NN{
+    margin-left: 52vh;
+  }
+
+}

@@ -1,0 +1,55 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div id="goalhead">
+<h1><p>Hello, {{firstName}} {{lastName}}</p></h1>
+
+</div>
+
+
+<div id="buttonhome" class="panel btn-pref btn-group btn-group-justified " role="group"  >
+
+        <div  class="tab-content " style= "margin-top:10px; " >
+              <div class="tab-pane panel active" id="tab1" >
+                    <div *ngIf="showUserGoals == true">
+                      <h3>Your Goals <p>Number of Goals: {{goalcount}}</p> </h3>
+                         <app-homepagegoaldisplay></app-homepagegoaldisplay>
+                    </div>
+               </div>
+
+                <div class="tab-pane panel " id="tab3" >
+                    <form role="form" class="form-inline" >
+                        <h2> <br> ... Tab 3</h2>
+                     </form>
+                </div>
+
+          </div>
+
+<div class="tabnav">
+                <div class="btn-group btn-group-justified ">
+                 <div class="btn-group  " role="group">
+
+
+                     <button id="b1" type="button" (click)="showGoals()" class="btn btn-nav" href="#tab1" data-toggle="tab" >
+                     <div class="visible" >Goals  <span class="glyphicon glyphicon-user" aria-hidden="true"> </span></div>
+                      </button>
+
+
+                   </div>
+
+
+                 <div class="btn-group" role="group">
+                   <button type="button" class="btn btn-nav" (click)="makeGoals()"data-toggle="tab" >
+                            <div class="visible">Make A Goal <span class="glyphicon glyphicon-flag" aria-hidden="true"></span></div>
+                       </button>
+
+
+                   </div>
+
+
+               </div>
+
+            </div>
+
+    </div>

@@ -1,0 +1,32 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="jumbotron" style="padding:45px 0px">
+  <h4 class="text-center">Sub-Goal To Do List</h4>
+</div>
+<button mat-stroked-button routerLink="subGoalDisplay" [class.activated]="currentUrl == 'subToDoList/subGoalDisplay'"><p><strong> Back to SubGoal</strong></p></button>
+
+
+<div class="input-group">
+  <input type="text" class="form-control" id="onlyinput" [(ngModel)]="itemTitle">
+  <div id="selector" class="input-group-addon hover-cursor" (click)="addItem()" >
+    <span id= "seen" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </div>
+</div>
+
+<div style ="margin:5px 0px">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of toDoListArray; index as i;">
+      <span class="hover-cursor">
+          <input name="check" type="checkbox" (click)="onChecked(item)" [checked] ="item[1]!==false">
+      </span>
+       {{item[0]}}
+      <span class="hover-cursor text-danger pull-right" (click)="onDelete(item)">
+        <span id="trash" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+      </span>
+    </li>
+  </ul>
+  <button type="button" class="btn btn-success" (click)="onSave()">Save</button>
+
+</div>

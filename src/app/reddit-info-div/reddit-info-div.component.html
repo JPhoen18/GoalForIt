@@ -1,0 +1,16 @@
+
+<div id="RedditDetail">
+  <h4> Web Article </h4>
+  <button mat-stroked-button routerLink="redditresource" [class.activated]="currentUrl == 'redditInfo/redditresource'">Back to Reddit Resources</button>
+
+  <p>Title: </p>
+  <div id="RedditTitle">{{oneuser$.title}}</div>
+
+  <p>Channel Title: </p>
+  <div id="RedditAuthor">{{oneuser$.channelTitle}}</div>
+
+  <p>Snippet: </p>
+  <div id="RedditResponse">{{oneuser$.description}}</div>
+
+  <button id="Saver" (click)="sendItBack(oneuser$.title, oneuser$.channelTitle, oneuser$.description)"> Save Post </button>
+  </div>

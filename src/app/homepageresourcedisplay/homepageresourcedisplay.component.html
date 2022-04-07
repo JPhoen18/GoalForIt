@@ -1,0 +1,28 @@
+
+<div id="mamadiv" [@listStagger]="resourcelists">
+    <div #event id="sister"*ngFor="let resource of resourcelists;index as i">
+         <div id="babydiv" routerLink="homeProfileResource" (click)="callIt(i)"  class="btn btn-nav">
+
+
+        <h5 *ngIf="(resource.RedditTitle)">
+        <h5>
+           <span id="Reddit" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+         <strong>Goal Title: </strong>{{resourceTitles[i]}}</h5>
+        <p><strong>Reddit Title:</strong>{{resource.RedditTitle}}</p>
+        <p><strong>Goal Source:</strong>{{resource.RedditAuthor}}</p>
+        </h5>
+
+        <h5 *ngIf="(resource.title)">
+          <h5>
+          <span id="Web" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+          <strong>Goal Title: </strong>{{resourceTitles[i]}}</h5>
+         <p><strong>Web Article Title:</strong>{{resource.title}}</p>
+        <p><strong>Web Article URL:</strong>{{resource.URL}}</p>
+        </h5>
+
+        </div>
+
+    </div>
+
+
+  </div>

@@ -1,0 +1,19 @@
+<div id="VidDetail">
+  <h4> Web Article </h4>
+  <button mat-stroked-button routerLink="videoresource" [class.activated]="currentUrl == 'vidInfo/videoresource'">Back to Web Resources</button>
+
+  <p>Title: </p>
+  <div id="vidTitle">{{oneuser$.title}}</div>
+
+  <p>Channel Title: </p>
+  <div id="vidChannelTitle">{{oneuser$.channelTitle}}</div>
+
+  <p>Link: </p>
+  <div id="vidURL">{{oneuser$.link}}</div>
+
+  <p>Snippet: </p>
+  <div id="vidDescription">{{oneuser$.description}}</div>
+  <button id="Saver" (click)="sendItBack(oneuser$.title,oneuser$.channelTitle, oneuser$.link, oneuser$.description)"> Save Video Resource </button>
+
+
+  </div>

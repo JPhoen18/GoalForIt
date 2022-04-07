@@ -1,0 +1,198 @@
+
+#setter{
+  width: 80vh;
+  height: 80vh;
+  margin: auto;
+
+}
+#overseer{
+  width: 73vh;
+  height: 58vh;
+  position: absolute;
+  margin-top: -15vh;
+  margin-left: 5vh;
+
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 5px 5px 5px 5px gray;
+
+}
+
+#overseer p{
+  margin-left: -40vh;
+  font-size: 18px;
+}
+
+#saveLists{
+  width: 75vh;
+  height: 8vh;
+  background-color: #ffd5cc;
+  /*background-color: #3cb371;*/
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+    box-shadow: 5px 5px 5px gray;
+
+}
+
+#sister{
+  background-color: #fd8368;
+  position: absolute;
+  width: 43vh;
+  height: 89.5vh;
+  margin-left: 32vh;
+  overflow-y: scroll;
+
+  border-top-right-radius: 10px;
+    box-shadow: 6px 0px 5px gray;
+
+}
+#practice{
+  overflow-y: scroll;
+  background-color: #FD3F14;
+}
+
+
+#makes{
+  background-color: #FF613D;
+  overflow-y: scroll;
+
+}
+#perfect{
+  background-color:  #FE947C;
+  overflow-y: scroll;
+
+}
+.counter{
+  margin-left: 0;
+  background-color: red;
+  text-align: center;
+}
+.shared{
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+}
+.pop{
+    height: 50px;
+    margin-left: 0px;
+    background-color: #ff751a;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    border: 1px solid saddlebrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.lock{
+    height: 40px;
+    margin-left: 0px;
+    background-color: red;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    border: 1px solid saddlebrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.medium{
+    height: 40px;
+    margin-left: 0px;
+    background-color: orange;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    border: 1px solid saddlebrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.low{
+    height: 40px;
+    margin-left: 0px;
+    background-color: #ffcc80;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    border: 1px solid saddlebrown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .cdk-drag-animating {
+    transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .fadeInDown {
+    background-color: #DCC7AA;
+
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+
+  }
+
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    #saveLists{
+      margin-top: -16vh;
+    }
+    #overseer{
+      height: 56vh;
+    }
+
+  }
+
+  @media only screen and (max-height: 400px) {
+     #setter{
+       background-color: red;
+       margin-top: 20vh;
+     }
+    #overseer{
+      margin-left: 0vh;
+    }
+    #sister{
+      margin-left: 36vh;
+      width: 46vh;
+      height: 97vh;
+    }
+    #saveLists{
+      width: 82vh;
+      height: 10vh;
+    }
+  }

@@ -1,0 +1,42 @@
+#continue{
+  margin-right: 4vh;
+  margin-left: 10vh;
+  background-color: white;/*#FE947C;*/
+}
+
+#cancel{
+  margin-left: 0vh;
+  background-color: white;/*#FE947C;*/
+}
+
+#subgoalCreate{
+  margin-left: 5vh;
+  background-color: white;
+}
+
+#subgoalStop{
+  background-color: white;
+  margin-left: 5vh;
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
+@media only screen and (max-height: 400px) {
+   #continue{
+     margin-left: 20vh;
+   }
+
+   #cancel{
+     margin-left: 11vh;
+   }
+
+   #subgoalCreate{
+     margin-left: 12vh;
+   }
+
+   #subgoalStop{
+    margin-left: 10vh;
+   }
+}

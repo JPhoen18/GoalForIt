@@ -1,0 +1,62 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<div class="input-group">
+  <p><strong>Current Sub Goal Title: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="subgoalTitle" placeholder="{{subgoalTitle}}">
+</div>
+
+<div class="input-group">
+  <p><strong>Current Sub Goal Description: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="subdescription" placeholder="{{subdescription}}">
+</div>
+
+<div class="input-group">
+  <p><strong>Current Sub Goal Creation Date: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="subgoalCreationDate" placeholder="{{subgoalCreationDate}}">
+</div>
+
+<div class="form-group">
+    <label for="subgoalCreationDate">New Sub Goal Start Date :</label>
+      <input
+        class="form-control"
+        id="subgoalCreationDate"
+        bsDatepicker [(ngModel)]="subgoalCreationDate"
+        [ngModelOptions]="{standalone: true}"
+        subgoalCreationDate="subgoalCreationDate"
+        #newGoalCreationDate="bsDatepicker"
+        bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }" >
+  <div class="col-xs-12 col-12 col-md-3 form-group">
+    <button type="button" class="btn btn-success" (click)="subgoalCreationDate.toggle()">Date Picker</button>
+</div>
+
+</div>
+
+
+
+<div class="input-group">
+  <p><strong>Current Sub Goal Due Date: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="subgoalDueDate" placeholder="{{subgoalDueDate}}">
+</div>
+
+
+<div class="form-group">
+    <label for="subgoalDueDate">New Sub Goal Creation Date :</label>
+      <input
+        class="form-control"
+        id="subgoalDueDate"
+        bsDatepicker [(ngModel)]="subgoalDueDate"
+        [ngModelOptions]="{standalone: true}"
+        subgoalDueDate="subgoalDueDate"
+        #newGoalDueDate="bsDatepicker"
+        bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }" >
+  <div class="col-xs-12 col-12 col-md-3 form-group">
+    <button type="button" class="btn btn-success" (click)="subgoalDueDate.toggle()">Date Picker</button>
+</div>
+
+</div>
+
+<button type="button" class="btn btn-success" id="savebutton" (click)="onSubSave()">Save</button>
+<button class="btn btn-success" routerLink="subGoalDisplay" id="subgoalbutton" [class.activated]="currentUrl == 'editOneSub/subGoalDisplay'">Sub Goal Page</button>

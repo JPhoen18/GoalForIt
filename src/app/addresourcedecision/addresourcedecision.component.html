@@ -1,0 +1,26 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h3>Extra Resources</h3>
+    <form (ngSubmit)="onSubmit()" #goalForm="ngForm">
+
+      <div class="form-group" id="onlyFormGroup">
+
+        <label>Would You Like to Add Online Resources?</label>
+        <input type="radio" name="option" class="form-control" id="resourceY"
+               required
+               [checked]="decisionmodel.resourceY === 1"
+               (change)="onDecisionChange(1)"
+               ><p id="YY"> Yes</p><br>
+        <input type="radio" name="option" class="form-control" id="resourceN"
+               required
+              [checked]="decisionmodel.resourceY === 2"
+              (change)="onDecisionChange(2)"
+               ><p id="NN"> No</p><br>
+
+      </div>
+      <div class="form-field">
+          <input type="submit" value="Submit">
+        </div>
+    </form>
+  </div>
+</div>

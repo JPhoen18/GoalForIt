@@ -1,0 +1,40 @@
+
+<div id="mother">
+    <div id="individual" [@listStagger]="finalGoalDisplay" *ngFor="let usergoal of finalGoalDisplay; index as i">
+      <p><strong>MileStone Group: {{i}}</strong></p>
+
+      <span *ngFor="let goal of usergoal; index as z">
+
+        <span *ngIf="(subGoalNowToEnd[i][z] > subGoalStartEnd[i][z]/2) && finalGoalDisplay[i][z]!=0">
+            <div id="child" routerLink="subGoalDisplay" (click)="fullSubGoalPage(goal)">
+              <h5>
+                  <p><strong>{{goal[0]}}</strong></p>
+                  <p><strong>Goal Due Date:{{goal[3] | date : "MM/dd/yy"}}</strong></p>
+              </h5>
+            </div>
+        </span>
+
+          <span *ngIf="(subGoalNowToEnd[i][z] < subGoalStartEnd[i][z]/2 && subGoalNowToEnd[i][z]>0 && finalGoalDisplay[i][z]!=0)">
+              <div id="child" style="background-color: #FF4517" routerLink="subGoalDisplay" (click)="fullSubGoalPage(goal)">
+                <h5> DUE DATE ALMOST HERE
+                    <p><strong>{{goal[0]}}</strong></p>
+                    <p><strong>Goal Due Date:{{goal[3] | date : "MM/dd/yy"}}</strong></p>
+                </h5>
+              </div>
+          </span>
+
+
+          <span *ngIf="(subGoalNowToEnd[i][z] <= 0 && finalGoalDisplay[i][z]!=0)">
+              <div id="child" style="background-color: #ff0000" routerLink="subGoalDisplay" (click)="fullSubGoalPage(goal)">
+                <h5>PAST DUE
+                    <p><strong>{{goal[0]}}</strong></p>
+                    <p><strong>Goal Due Date:{{goal[3] | date : "MM/dd/yy"}}</strong></p>
+                </h5>
+              </div>
+          </span>
+
+      </span>
+
+    </div>
+
+</div>

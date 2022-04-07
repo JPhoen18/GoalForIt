@@ -1,0 +1,55 @@
+.container{
+background-color: #FE947C;
+}
+
+@media only screen and (max-width: 400px) {
+  #firstFormGroup{
+    display: inline-block;
+    width: 100%;
+
+
+  }
+  #resourceY{
+    margin-left: 10vh;
+  }
+  #resourceN{
+    margin-left: 25vh;
+    margin-top: -16vh;
+  }
+  h1{
+   margin-top: 25vh;
+  }
+  #yes{
+    margin-left: 10.5vh;
+  }
+  #no{
+    margin-left: 26vh;
+  }
+
+}
+
+@media only screen and (max-height: 400px) {
+  #firstFormGroup{
+    display: inline-block;
+    width: 80%;
+
+
+  }
+  #resourceY{
+    margin-left: 20vh;
+  }
+  #resourceN{
+    margin-left: 50vh;
+    margin-top: -28.5vh;
+  }
+  h1{
+   margin-top: 25vh;
+  }
+  #yes{
+    margin-left: 20vh;
+  }
+  #no{
+    margin-left: 52vh;
+  }
+
+}

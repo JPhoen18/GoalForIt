@@ -1,0 +1,62 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<div class="input-group">
+  <p><strong>Current Goal Title: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="goalTitle" placeholder="{{goalTitle}}">
+</div>
+
+<div class="input-group">
+  <p><strong>Current Goal Description: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="description" placeholder="{{description}}">
+</div>
+
+<div class="input-group">
+  <p><strong>Current Goal Creation Date: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="goalCreationDate" placeholder="{{goalCreationDate}}">
+</div>
+
+<div class="form-group">
+    <label for="goalCreationDate">New Goal Creation Date :</label>
+      <input
+        class="form-control"
+        id="goalCreationDate"
+        bsDatepicker [(ngModel)]="goalCreationDate"
+        [ngModelOptions]="{standalone: true}"
+        goalCreationDate="goalCreationDate"
+        #newGoalCreationDate="bsDatepicker"
+        bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }" >
+  <div class="col-xs-12 col-12 col-md-3 form-group">
+    <button type="button" class="btn btn-success" (click)="goalCreationDate.toggle()">Date Picker</button>
+</div>
+
+</div>
+
+
+
+<div class="input-group">
+  <p><strong>Current Goal Due Date: </strong></p>
+  <input type="text" class="form-control" [(ngModel)]="goalDueDate" placeholder="{{goalDueDate}}">
+</div>
+
+
+<div class="form-group">
+    <label for="goalDueDate">New Goal Creation Date :</label>
+      <input
+        class="form-control"
+        id="goalCreationDate"
+        bsDatepicker [(ngModel)]="goalDueDate"
+        [ngModelOptions]="{standalone: true}"
+        goalDueDate="goalDueDate"
+        #newGoalDueDate="bsDatepicker"
+        bsDatepicker [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }" >
+  <div class="col-xs-12 col-12 col-md-3 form-group">
+    <button type="button" class="btn btn-success" (click)="goalDueDate.toggle()">Date Picker</button>
+</div>
+
+</div>
+
+<button type="button" class="btn btn-success" id="goalsavebutton" (click)="onSave()">Save</button>
+<button class="btn btn-success" routerLink="goalHub" id="goalpagebutton" [class.activated]="currentUrl == 'editGoal/goalHub'">Goal Page</button>

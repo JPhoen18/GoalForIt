@@ -1,0 +1,9 @@
+<div [@listStagger]="users$">
+    <div *ngFor="let user of users$; index as i" routerLink="vidInfo" (click)="getIndex(i)" [class.activated]="currentUrl == 'videoresource/vidInfo'">
+        <h5>
+        <h4><strong>{{user.title}}</strong></h4>
+        <p><img src={{user.URL}} width="220vh" height="120vh" ></p>
+        <p>{{user.link}}</p>
+        </h5>
+    </div>
+</div>

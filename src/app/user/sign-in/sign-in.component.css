@@ -1,0 +1,75 @@
+#pushsubmit{
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 4vh;
+
+}
+
+#signin{
+  width: 60vh;
+  margin-top: 8vh;
+  margin-left: 1vh;
+
+  /*background-color: #e9dbc9;*/
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: auto;
+
+}
+
+#signin #email{
+
+  width: 40vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: auto;
+  margin-bottom: 2vh;
+  background-color: #FFE6E0;
+}
+
+
+#signin #password{
+
+  width: 40vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: auto;
+  background-color: #FFE6E0;
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
+@media only screen and (max-height: 400px) {
+
+  #pushsubmit{
+    margin-left: 38vh;
+  }
+  #signin #email{
+    width: 80vh;
+    margin-left: 10vh;
+   }
+   #signin #password{
+    width: 80vh;
+    margin-left: 10vh;
+   }
+   #signin{
+     width: 100vh;
+   }
+
+}

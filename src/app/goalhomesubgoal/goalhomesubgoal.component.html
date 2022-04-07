@@ -1,0 +1,18 @@
+
+
+<div id="father" [@listStagger]="userGoals">
+    <div *ngFor="let usergoal of userGoals; index as i">
+
+      <span *ngIf="(usergoal[0]!=undefined)">
+           <div id="grandkid" class="btn btn-nav">
+        <h5>
+        <p><strong>Sub Goal Title:</strong>{{usergoal[0]}}</p>
+        <p><strong>Sub Goal Description:</strong>{{usergoal[1]}}</p>
+        <p><strong>Sub Goal Due Date:</strong>{{usergoal[2] | date : "MM/dd/yy"}}</p>
+        </h5>
+      </div>
+
+      </span>
+
+    </div>
+</div>

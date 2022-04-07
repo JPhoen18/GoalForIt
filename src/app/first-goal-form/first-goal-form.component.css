@@ -1,0 +1,31 @@
+#creategoal{
+  margin-top:15vh;
+
+}
+
+
+
+.container{
+  background-color: #FE947C;
+
+}
+
+#errormessage{
+   color: red;
+}
+
+@media only screen and (max-width: 400px) {
+   #creategoal{
+     margin: auto;
+     margin-top: 20vh;
+     padding-bottom: 4vh;
+   }
+}
+
+@media only screen and (max-height: 400px) {
+   #creategoal{
+     margin: auto;
+     margin-top: 30vh;
+     padding-bottom: 8vh;
+   }
+}

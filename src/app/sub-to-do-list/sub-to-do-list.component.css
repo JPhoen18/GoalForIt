@@ -1,0 +1,39 @@
+.jumbotron{
+  position: flex;
+  width: 50vh;
+  height: 15vh;
+  margin-top: 20vh;
+
+}
+
+.input-group{
+
+  width: 50vh;
+}
+
+#selector{
+  width: 5vh;
+  background-color: silver;
+}
+
+#seen{
+  width: 2vh;
+  height: 2vh;
+}
+h4{
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
+@media only screen and (max-height: 400px) {
+ #onlyinput{
+   width: 150vh;
+ }
+ .jumbotron{
+   width: 160vh;
+   margin-top: 28vh;
+ }
+}

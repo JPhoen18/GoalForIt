@@ -1,0 +1,145 @@
+nav ul li a div{
+
+      margin-left: 0px;
+      text-align: center;
+
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+nav{
+margin-top: 10px;
+margin-left: 5px;
+margin-right: 5px;
+align: center;
+width: 100%;
+
+}
+nav ul li a{
+  align: center;
+}
+
+nav ul li{
+  float: left;
+  padding: 20px;
+}
+
+#Vid{
+  background-color: #cc9900;
+  position: relative;
+  width: 100px;
+  height: 85px;
+  margin-left: 0;
+  padding-right: 40px;
+
+
+
+}
+#Web{
+  background-color: #8bc811;
+  position: relative;
+  width: 100px;
+  margin-left: 0;
+  padding-right: 40px;
+
+
+
+}
+#Forum{
+  background-color: #3cb371;
+  position: relative;
+  width: 100px;
+  margin-left: 0;
+  padding-right: 40px;
+}
+
+.visible span{
+    vertical-align: middle;;
+}
+
+.visible{
+  font-size: 2.8vh;
+}
+
+
+
+.btn-nav {
+   color: #e92d00;
+   width: 20vh;
+   height: 15vh;
+   box-shadow: 2px 2px 2px 2px gray;
+    background-color: #fff;
+    border: 1px solid #e0e1db;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.btn-nav:hover {
+     color: green;
+     cursor: pointer;
+    -webkit-transition: color 1s; /* For Safari 3.1 to 6.0 */
+    transition: color 1s;
+}
+.btn-nav:active {
+    background: grey;
+    color: #1dcaff;
+    padding: auto;
+    border-top:2px solid #1dcaff ;
+    border-bottom:2px solid #1dcaff  ;
+    border-left: 2px solid #1dcaff;
+    border-right: 2px solid  #1dcaff;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -webkit-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -moz-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -ms-transition: border 0.3s ease-out, color 0.3s ease 0.5s; /* IE10 is actually unprefixed */
+    -o-transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    transition: border 0.3s ease-out, color 0.3s ease 0.5s;
+    -webkit-animation: pulsate 1.2s linear infinite;
+    animation: pulsate 1.2s linear infinite;
+}
+
+.btn-nav .glyphicon {
+    padding-top: 0px;
+	font-size: 40px;
+}
+.btn-nav.active p {
+    margin-bottom: 8px;
+}
+@-webkit-keyframes pulsate {
+ 50% { color: #000; }
+}
+@keyframes pulsate {
+ 50% { color: #000; }
+}
+@media (max-width: 100%) {
+    .btn-group {
+        display: block !important;
+        float: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 100%) {
+    .btn-nav .glyphicon {
+        padding-top: 12px;
+        font-size: 26px;
+    }
+}
+@media only screen and (max-height: 400px) {
+  .btn-nav .glyphicon {
+  	font-size: 20px;
+  }
+  nav ul{
+    margin-top: -28vh;
+    margin-bottom: 30vh;
+
+  }
+
+}

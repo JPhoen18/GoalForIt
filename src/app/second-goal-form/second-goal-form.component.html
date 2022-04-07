@@ -1,0 +1,40 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Break It Down</h1>
+    <form  #secondForm="ngForm" (ngSubmit)="onSubmit()">
+
+
+      <div class="form-group" id="firstFormGroup">
+
+        <label>Create Continous Subtasks?</label>
+        <input type="radio" name="option" class="form-control" id="resourceY"
+               required
+               [checked]="decisionmodel.resourceY === 1"
+               (change)="onDecisionChange(1)"
+               ><p id="yes"> Yes<p> <br>
+        <input type="radio" name="option" class="form-control" id="resourceN"
+               required
+              [checked]="decisionmodel.resourceY === 2"
+              (change)="onDecisionChange(2)"
+               ><p id="no">  No </p><br>
+
+      </div>
+
+   <div *ngIf="(decisionmodel.resourceYN==2)">
+    <div class="form-group">
+      <label for="subValues">Option 2: Estimated Number of Subtasks:</label>
+      <input type="number" class="form-control" id="subValues"
+      required
+      [(ngModel)]="littlegoals.subValues" [ngModelOptions]="{standalone: true}" subValues="subValues"
+      #subValues="ngModel">
+      <div [hidden]="subValues.valid || subValues.pristine"
+           class="alert alert-danger">
+        You must enter a number, even 0 is fine!
+      </div>
+    </div>
+  </div>
+
+
+    </form>
+  </div>
+</div>

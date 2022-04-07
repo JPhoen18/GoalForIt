@@ -1,0 +1,62 @@
+
+
+#mamadiv{
+  height: 60vh;
+  width: 100vh;
+  overflow-y: scroll;
+}
+
+#sister{
+  z-index:1;
+  margin-left: 10vh;
+
+}
+#babies{
+  width: 8vh;
+  height: 8vh;
+  float: right;
+  margin-top: 1vh;
+  margin-right: -9vh;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  box-shadow: 5px 5px 5px grey;
+}
+#babydiv{
+  background-color: #FE947C;
+  width: 80vh;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  align: center;
+  text-align: center;
+  box-shadow: 5px 5px 5px grey;
+  margin-bottom: 10vh;
+  text-align: center;
+  overflow-y: scroll;
+  white-space: normal;
+}
+
+@media only screen and (max-width: 400px) {
+
+
+}
+
+@media only screen and (max-height: 400px) {
+  #mamadiv{
+    width: 100%;
+  }
+
+  #sister{
+    width: 60%;
+    margin: auto;
+  }
+
+  #babydiv{
+    width: 100%;
+    margin-left: 0vh;  
+  }
+}

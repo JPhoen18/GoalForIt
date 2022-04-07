@@ -1,0 +1,178 @@
+
+ body{
+  background-color:  #ff613d; /*#F7C331;*/
+  width:120%;
+  height: 200%;
+
+
+}
+
+#Person {
+    text-align: center;
+    color: blue;
+    width: 100%;
+}
+#DivHead {
+     align: center;
+     top: 0;
+     width: 100%;
+     text-align: center;
+     background-color: gray;
+
+}
+
+#sidebarcontainer{
+  width: 100%;
+  align: center;
+}
+#Choice{
+  position: relative;
+  align: center;
+  width: 100%;
+  margin-top: 80px;
+  margin-left: -130px;
+  align: center;
+  width: 100%;
+}
+
+#content {
+  margin-top: 150px;
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
+  height: 200%;
+  position: relative;
+  margin-top: 30vh;
+  z-index: 6;
+  /*background-color: red;*/
+  background-color: #FD7758;
+
+  box-shadow: 2px 2px 30px black;
+
+
+}
+
+
+
+#inplace{
+  position: relative;
+  align: center;
+  width: 100%;
+  z-index: 7;
+  margin-top: -40vh;
+  bottom: 0px;
+
+
+}
+
+
+#GoalHead{
+  background-color: yellow;
+  padding-left: 20px;
+  align: center;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#settleDown{
+  position: absolute;
+  align: center;
+  width: 100%;
+  z-index: 5;
+  margin-left: 0px;
+  top: 50px;
+
+}
+#ResourceHead{
+  background-color: gray;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#GI{
+  background-color: #3cb371;
+  padding-left: 50px;
+}
+#PP{
+  background-color: #59be86;
+}
+#LP{
+  background-color: #80cea3;
+  padding-right:50px;
+}
+
+#bottomheader{
+  text-align: center;
+  margin-top: 17vh;
+  background-color: #FE947C; /*#3cb371;*/
+}
+
+header {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+#options{
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+/*  background-color: red;*/
+  width: 100%;
+}
+
+#options li{
+  float: left;
+  padding-left: 25vh;
+}
+
+#opt1{
+  padding-top: 2.5vh;
+  width: 20vh;
+  background-color: #ff6600;
+  text-align: center;
+  font-size: 3vh;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 15vh;
+  box-shadow: 2px 2px 2px 2px gray;
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
+@media only screen and (max-height: 400px) {
+/* work in here next time for the resourcepage stuff*/
+  #content{
+    width: 170%;
+    margin-left: -52vh;
+    margin-top: -14vh;
+      background-color:  #ff613d; 
+  }
+
+  #inplace{
+    margin-top: -30vh;
+    width: 170%;
+    margin-left: -52vh;
+  }
+  #options li{
+    float: left;
+    padding-left: 35vh;
+  }
+  #bottomheader{
+    margin-top: 8vh;
+    width: 100%;
+  }
+
+  #options li:nth-child(1){
+    margin-left: 4%;
+  }
+  #options li:nth-child(2){
+    margin-left:15%;
+  }
+
+}

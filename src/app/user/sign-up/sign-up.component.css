@@ -1,0 +1,114 @@
+#pushit{
+  text-align: center;
+  margin-left: 40%;
+  margin-top: 1vh;
+}
+
+#signup{
+  margin: auto;
+  width: 60vh;
+}
+
+#signup #firstname{
+  width: 30vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: auto;
+  margin-bottom: 1vh;
+  background-color: #FFE6E0;
+}
+
+#signup #lastname{
+  width: 30vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: auto;
+  margin-bottom: 1vh;
+  background-color: #FFE6E0;
+}
+
+#signup #userid{
+  width: 30vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: auto;
+  margin-bottom: 1vh;
+  background-color: #FFE6E0;
+}
+
+#signup #password{
+  width: 30vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: auto;
+  margin-bottom: 1vh;
+  background-color: #FFE6E0;
+}
+
+#signup #email{
+  width: 30vh;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #293d3d;
+  box-shadow: 1px 1px 1px 1px #293d3d;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  margin: auto;
+  background-color: #FFE6E0;
+
+}
+
+@media only screen and (max-width: 400px) {
+
+}
+
+@media only screen and (max-height: 400px) {
+  #signup #firstname{
+    width: 60vh;
+  }
+  #signup #lastname{
+    width: 60vh;
+  }
+  #signup #userid{
+    width: 60vh;
+  }
+  #signup #password{
+    width: 60vh;
+  }
+  #signup #email{
+    width: 60vh;
+  }
+
+  #signup{
+    width: 100vh;
+  }
+
+
+
+}

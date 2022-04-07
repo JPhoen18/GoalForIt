@@ -1,0 +1,60 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div id="setter">
+
+<div id="overseer" class= "fadeInDown"><p>Priority Lists</p>
+
+<div id ="practice" class='shared'cdkDropList  [cdkDropListData]="highpriority"
+[cdkDropListConnectedTo]= "[firstList, thirdList, fourthList]" #secondList= "cdkDropList"
+(cdkDropListDropped)= "drop($event)">
+<h5>High Priority</h5>
+<span *ngFor= "let high of highpriority; index as i">
+  <span *ngIf="high.AuthorURL != 'High Priority'">
+    <div class= "lock" cdkDrag>
+      {{high.AuthorURL}}{{high.URL}}{{high.RedditTitle}}
+    </div>
+  </span>
+</span>
+</div>
+
+<div id ="makes" class="shared" cdkDropList  [cdkDropListData]="mediumpriority"
+[cdkDropListConnectedTo]= "[firstList, secondList, fourthList]" #thirdList= "cdkDropList"
+(cdkDropListDropped)= "drop($event)">
+<h5>Medium Priority</h5>
+<span *ngFor= "let med of mediumpriority; index as i">
+  <span *ngIf="med.AuthorURL != 'Medium Priority'">
+    <div class= "medium" cdkDrag>
+      {{med.AuthorURL}}{{med.URL}}{{med.RedditTitle}}
+   </div>
+  </span>
+</span>
+</div>
+
+<div id ="perfect" class="shared" cdkDropList  [cdkDropListData]="lowpriority"
+[cdkDropListConnectedTo]= "[firstList, secondList, thirdList]" #fourthList= "cdkDropList"
+(cdkDropListDropped)= "drop($event)">
+<h5>Low Priority</h5>
+<span *ngFor= "let low of lowpriority; index as i">
+ <span *ngIf="low.AuthorURL != 'Low Priority'">
+   <div class= "low" cdkDrag>
+     {{low.AuthorURL}}{{low.URL}}{{low.RedditTitle}}
+   </div>
+ </span>
+</span>
+</div>
+
+
+<div id= "sister" class="shared" cdkDropList  [cdkDropListData]="totalpriority"
+[cdkDropListConnectedTo]= "[secondList, thirdList, fourthList]" #firstList= "cdkDropList"
+(cdkDropListDropped)= "drop($event)">
+<h5 id="goalhead">Goal Resources</h5>
+<div *ngFor= "let total of totalpriority; index as i" class= "pop" cdkDrag>{{total.URL}}{{total.RedditTitle}}</div>
+</div>
+
+<div>
+<button id="saveLists" (click)="sendTheLists()"> Save Lists & Create Goal </button>
+</div>
+</div>
+</div>

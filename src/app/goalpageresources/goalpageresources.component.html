@@ -1,0 +1,40 @@
+
+
+
+<div id="resorganizer">
+
+<label>
+  <mat-checkbox (change)="take()" [checked]="haveReadBoolean===true" id="checkerbox" ></mat-checkbox>
+  Did you read/view resource?
+</label>
+
+<div *ngIf="(haveReadBoolean===true)">
+  <p style="color: green;">It appears you have read this </p>
+</div>
+
+<div id="resourceview" *ngIf="(specResObj.RedditTitle)">
+<p>Title: </p>
+<div id="RedditTitle">{{specResObj.RedditTitle}}</div>
+
+<p>URL: </p>
+<div id="RedditAuthor">{{specResObj.RedditAuthor}}</div>
+
+<p>Snippet: </p>
+<div id="RedditResponse">{{specResObj.AuthorResponse}}</div>
+</div>
+
+<div id="resourceview" *ngIf="(specResObj.title)">
+<p>Title: </p>
+<div id="webTitle">{{specResObj.title}}</div>
+
+<p>URL: </p>
+<div id="webURL">{{specResObj.URL}}</div>
+
+<p>Snippet: </p>
+<div id="webSnippet">{{specResObj.Summary}}</div>
+</div>
+
+<button mat-stroked-button routerLink="/goalHub" [class.activated]="currentUrl == 'homeProfileResource/goalHub'">Back to Goal Page</button>
+
+
+</div>

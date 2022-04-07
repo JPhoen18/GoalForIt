@@ -1,0 +1,70 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container-fluid">
+	<button mat-stroked-button routerLink="goalHub" id="maingoalbutton" [class.activated]="currentUrl == 'subGoalDisplay/goalHub'"><p><strong> Back to Main Goal</strong></p></button>
+
+	<div class="row">
+	<div class="profile-head">
+
+        <div class="profiles col-xs-8 col-xs-push-2  col-sm-10 col-sm-push-1 thumbnail">
+          <div id="substyle" class="col-md-3 col-sm-3 col-xs-12">
+            <div class="row">
+
+
+          </div>
+					<div id="subsub">
+					<h2 class="subgoaltime"><strong>SUB GOAL TITLE: {{subgoaltitle}}</strong></h2>
+					<h2 class="subgoaltime"><strong>DUE DATE: {{dueDate  | date : "MM/dd/yy"}}</strong></h2>
+
+					<h2 class="subgoaltime"><strong><button type="btn btn-success" (click)="deleteSubGoal()">Delete SubGoal</button></strong></h2>
+					</div>
+        </div>
+             <div class="col-md-9 visible-lg">
+
+               <div id="infodisplay" class="row">
+                 <span class="col-sm-12"><h5>Sub Goal Specifics</h5></span>
+              <!--  <div class="col-md-4 col-sm-6 col-xs-12 mark">
+
+                      <h5><p>Progress:</p></h5>
+                      <ul>
+                      <li><span ><strong>Sub Goal Group: </strong></span></li>
+                      <li><span><strong>To-Do List: </strong></span></li>
+                      <li><span><strong>Description: </strong></span></li>
+											<li><span><strong>Edit SubGoal: </strong></span></li>
+
+
+
+                      </ul>
+                </div><!--col-md-8 col-sm-8 col-xs-12 close-->
+                 <div class="col-md-4 col-sm-12 col-xs-12 mark" id="infodispdiv">
+
+                      <p>Progress: <span *ngIf="(percent!==undefined)">
+											<circle-progress
+						  [percent]= percent
+						  [radius]="30"
+						  [outerStrokeWidth]="10"
+						  [innerStrokeWidth]="8"
+						  [outerStrokeColor]="'#78C000'"
+						  [innerStrokeColor]="'#C7E596'"
+						  [animation]="true"
+						  [animationDuration]="300"
+						></circle-progress>
+						</span></p>
+                      <ul>
+                      <li><span><strong>Sub-Goal Group #{{subGoalGroup}}</strong></span></li>
+                      <li><span>	<button mat-stroked-button routerLink='subToDoList' [class.activated]="currentUrl == 'subGoalDisplay/subToDoList'"><p><strong>To-Do List</strong></p></button>
+											</span></li>
+                      <li><span><strong>Description: {{description}} </strong></span></li>
+											<li><span>	<button mat-stroked-button routerLink='editOneSub' [class.activated]="currentUrl == 'subGoalDisplay/editOneSub'"><p><strong>Edit SubGoal</strong></p></button>
+											</span></li>
+
+
+
+                      </ul>
+                </div><!--col-md-8 col-sm-8 col-xs-12 close-->
+              </div>
+            </div>
+        </div>
+</div><!--profile-head close-->
+	</div>
+</div>

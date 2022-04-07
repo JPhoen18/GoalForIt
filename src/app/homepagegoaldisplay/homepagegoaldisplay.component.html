@@ -1,0 +1,130 @@
+
+
+
+
+
+
+<div id="father" [@listStagger]="userGoals">
+
+     <div id="menuholder">
+      <i class="material-icons" id="icon1" (click)="hideShowSideNav()" style="color: orange;">
+      menu
+      </i>
+
+      <div id="sidenav">
+
+
+
+         <li><a (click)="showAll()">Every Goal</a></li>
+         <li><a (click)="showComplete()">Goals Done</a></li>
+         <li><a (click)="showPastDue()">Past Due</a></li>
+         <li><a (click)="showAlmostDue()">Almost Due</a></li>
+         <li><a (click)="newToOld()">New to Old</a></li>
+         <li><a (click)="oldToNew()">Old to New</a></li>
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+    <div id="mother" *ngFor="let usergoal of userGoals; index as i">
+
+      <span *ngIf="(userGoalNowToEndTime[i] <= 0)">
+
+
+        <div *ngIf="(usergoal.finishedOrNot === false || usergoal.finishedOrNot === undefined || usergoal.finishedOrNot === null)" id="secondborn"  class="leader" style="background-color: #ff0000;" routerLink="homeProfileResource" (click)="sendToGoals(usergoal.goalOrderNumber)"  class="btn btn-nav">
+
+         <h5>
+          <h2><strong>Past Due!</strong></h2>
+
+          <p><strong>{{usergoal.goalTitle}}</strong></p>
+          <p>{{usergoal.description}}</p>
+          <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+         </h5>
+        </div>
+
+        <div *ngIf="(usergoal.finishedOrNot === true)" id="secondborn"  class="leader" style="background-color: green;" routerLink="homeProfileResource" (click)="sendToGoals(usergoal.goalOrderNumber)"  class="btn btn-nav">
+
+         <h5>
+          <h2><strong>Goal Completed</strong></h2>
+
+          <p><strong>{{usergoal.goalTitle}}</strong></p>
+          <p>{{usergoal.description}}</p>
+          <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+         </h5>
+        </div>
+
+
+
+
+     </span>
+
+      <span *ngIf="(userGoalNowToEndTime[i] > userGoalStartToEndTime[i]/2)">
+
+
+        <div *ngIf="(usergoal.finishedOrNot === false || usergoal.finishedOrNot === undefined || usergoal.finishedOrNot === null)" id="secondborn"  class="leader" style="background-color:#FF9933;" routerLink="homeProfileResource" (click)="sendToGoals(usergoal.goalOrderNumber)"  class="btn btn-nav">
+
+        <h5>
+        <p><strong>{{usergoal.goalTitle}}</strong></p>
+        <p>{{usergoal.description}}</p>
+        <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+        </h5>
+        </div>
+
+
+
+        <div *ngIf="(usergoal.finishedOrNot === true)" id="secondborn"  class="leader" style="background-color:green;" routerLink="homeProfileResource" (click)="sendToGoals(usergoal.goalOrderNumber)"  class="btn btn-nav">
+
+        <h5>
+        <h2><strong>Goal Completed</strong></h2>
+        <p><strong>{{usergoal.goalTitle}}</strong></p>
+        <p>{{usergoal.description}}</p>
+        <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+        </h5>
+        </div>
+
+
+    </span>
+
+
+
+    <span *ngIf="(userGoalNowToEndTime[i] < userGoalStartToEndTime[i]/2 && userGoalNowToEndTime[i]>0)">
+
+
+      <div *ngIf="(usergoal.finishedOrNot === false || usergoal.finishedOrNot === undefined || usergoal.finishedOrNot === null)" id="secondborn"  class="leader" style="background-color: #FF4517;" routerLink="homeProfileResource" (click)="sendToGoals(usergoal.goalOrderNumber)"  class="btn btn-nav">
+     <h5>
+       <h2><strong>Almost Due</strong></h2>
+       <p><strong>{{usergoal.goalTitle}}</strong></p>
+     <p>{{usergoal.description}}</p>
+     <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+     </h5>
+     </div>
+
+
+
+      <div *ngIf="(usergoal.finishedOrNot === true)" id="secondborn"  class="leader" style="background-color: green;" routerLink="homeProfileResource" (click)="sendToGoals(usergoal.goalOrderNumber)"  class="btn btn-nav">
+     <h5>
+       <h2><strong>Goal Completed</strong></h2>
+       <p><strong>{{usergoal.goalTitle}}</strong></p>
+     <p>{{usergoal.description}}</p>
+     <p><strong>Goal Due Date:</strong>{{usergoal.goalDueDate | date : "MM/dd/yy"}}</p>
+     </h5>
+     </div>
+
+
+
+   </span>
+
+
+
+
+
+
+
+
+    </div>
+</div>
